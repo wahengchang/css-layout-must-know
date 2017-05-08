@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+
+<style>
+.tooltip{
+    display: inline;
+    position: relative;
+}
+
+.tooltip:hover:after{
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    bottom: 25px;
+    /*left: 30px;*/
+    color: #fff;
+    /*** content: attr(title) ***/
+    content: attr(title);
+    left: 20%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: 220px;
+}
+.tooltip:hover:before{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+}
+
+.box {
+    margin: 50px;
+}
+</style>
+
+</head>
+<body>
+<div class="box">
+    <a title="This is some information for our tooltip." class="tooltip">CSS3 Tooltip</a>
+</div>
+
+</body>
+</html>
